@@ -136,6 +136,7 @@ $(function(){
 			url: url,
 			success: function(data, textStatus, jqXHR){
 				$('#retorno ol').append("<li>Seu saldo é R$ "+data.saldo+"</li>");
+				$('input[type=number]').val('');
 			}, 
 		
 			error: function(data, textStatus, errorThrown){

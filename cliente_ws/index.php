@@ -115,19 +115,19 @@ $(function(){
 		var valor = $("#valor").val() + "." +$("#valor_centavos").val();
 		var operacao = 'com sucesso';
 		if($('[name="opcao"]:checked').attr('class') == "saldo"){
-			url = "http://localhost/ws/index.php/api/banco_ws/saldo/conta/"+$('#conta').val()+"/format/json";
+			url = "../ws/index.php/api/banco_ws/saldo/conta/"+$('#conta').val()+"/format/json";
 			operacao = "Saldo consultado "+operacao;
 		}
 		else if($('[name="opcao"]:checked').attr('class') == "depositar"){
-			url = "http://localhost/ws/index.php/api/banco_ws/depositar/conta/"+$('#conta').val()+"/valor/"+valor+"/format/json";
+			url = "../ws/index.php/api/banco_ws/depositar/conta/"+$('#conta').val()+"/valor/"+valor+"/format/json";
 			operacao = "Deposito feito "+operacao;
 		}
 		else if($('[name="opcao"]:checked').attr('class') == "sacar"){
-			url = "http://localhost/ws/index.php/api/banco_ws/sacar/conta/"+$('#conta').val()+"/valor/"+valor+"/format/json";
+			url = "../ws/index.php/api/banco_ws/sacar/conta/"+$('#conta').val()+"/valor/"+valor+"/format/json";
 			operacao = "Saque relizado "+operacao;
 		}
 		else if($('[name="opcao"]:checked').attr('class') == "transferir"){
-			url = "http://localhost/ws/index.php/api/banco_ws/transferir/conta/"+$('#conta').val()+"/valor/"+valor+"/origem/"+$('#contaOrigem').val()+"/format/json";
+			url = "../ws/index.php/api/banco_ws/transferir/conta/"+$('#conta').val()+"/valor/"+valor+"/origem/"+$('#contaOrigem').val()+"/format/json";
 			operacao = "Transferencia realizada "+operacao;
 		}
 		
